@@ -6,16 +6,16 @@
 
 ##  Tính Năng Nổi Bật
 
-- **🔍 Giám sát đa dịch vụ (Multi-Service Monitoring):** Hỗ trợ theo dõi đồng thời nhiều dịch vụ (`httpd`, `sshd`, `crond`, `mariadb`, `nginx`, v.v.) thông qua systemd timer/service.
-- **⚡ Tự động phục hồi (Real-time Auto-Healing):** Ngay khi phát hiện dịch vụ bị dừng hoặc crash, Agent tự động thực hiện lệnh khởi động lại (`systemctl restart`) để đảm bảo tính sẵn sàng cao (High Availability - HA).
-- **🤖 Phân tích nguyên nhân bằng AI (Powered by Groq/Llama 3.1):** Tự động thu thập 50 dòng log cuối từ `journalctl`, gửi tới Groq AI (Llama 3.1-8b-instant) để:
+- ** Giám sát đa dịch vụ (Multi-Service Monitoring):** Hỗ trợ theo dõi đồng thời nhiều dịch vụ (`httpd`, `sshd`, `crond`, `mariadb`, `nginx`, v.v.) thông qua systemd timer/service.
+- ** Tự động phục hồi (Real-time Auto-Healing):** Ngay khi phát hiện dịch vụ bị dừng hoặc crash, Agent tự động thực hiện lệnh khởi động lại (`systemctl restart`) để đảm bảo tính sẵn sàng cao (High Availability - HA).
+- ** Phân tích nguyên nhân bằng AI (Powered by Groq/Llama 3.1):** Tự động thu thập 50 dòng log cuối từ `journalctl`, gửi tới Groq AI (Llama 3.1-8b-instant) để:
   - Phân biệt chính xác giữa **Lỗi hệ thống (SIGKILL, OOM, Segfault)** và **Hành động tắt thủ công từ Admin (`systemctl stop`)**.
   - Phân tích nguyên nhân gốc rễ (Root Cause Analysis).
   - Đưa ra giải pháp và câu lệnh khắc phục cụ thể cho System Admin.
   - Đánh giá mức độ nghiêm trọng (`LOW` / `MEDIUM` / `HIGH` / `CRITICAL`).
-- **⚙️ Giám sát tài nguyên Proactive (v3.0 - MỚI):** Thu thập CPU, RAM, Disk mỗi 5 giây. Khi vượt ngưỡng (CPU > 90%, RAM > 85%, Disk > 90%) → AI tự động phân tích nguyên nhân và gửi Email cảnh báo **trước khi** hệ thống bị sập.
-- **📧 Cảnh báo tức thì qua Gmail SMTP:** Gửi báo cáo chi tiết kèm phân tích của AI trực tiếp đến hộp thư của người quản trị.
-- **📊 Dashboard Web Trực quan:** Giao diện Dark Mode hiện đại với thanh tiến trình CPU/RAM/Disk real-time, cập nhật trạng thái mỗi 1 giây (không giật cuộn trang).
+- ** Giám sát tài nguyên Proactive (v3.0 - MỚI):** Thu thập CPU, RAM, Disk mỗi 5 giây. Khi vượt ngưỡng (CPU > 90%, RAM > 85%, Disk > 90%) → AI tự động phân tích nguyên nhân và gửi Email cảnh báo **trước khi** hệ thống bị sập.
+- ** Cảnh báo tức thì qua Gmail SMTP:** Gửi báo cáo chi tiết kèm phân tích của AI trực tiếp đến hộp thư của người quản trị.
+- ** Dashboard Web Trực quan:** Giao diện Dark Mode hiện đại với thanh tiến trình CPU/RAM/Disk real-time, cập nhật trạng thái mỗi 1 giây (không giật cuộn trang).
 
 ---
 
