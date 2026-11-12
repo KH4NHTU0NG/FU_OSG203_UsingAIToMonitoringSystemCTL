@@ -1,10 +1,10 @@
-# 🛡️ AI Service Monitor v3.0
+# AI Service Monitor v3.0
 
 **Hệ thống theo dõi, tự động phục hồi (Auto-Healing), giám sát tài nguyên (CPU/RAM/Disk) và phân tích nguyên nhân gốc rễ sự cố thời gian thực (Real-time Root Cause Analysis) cho các dịch vụ Linux trên CentOS 10, sử dụng Groq AI (Llama 3.1) và cảnh báo qua Email.**
 
 ---
 
-## 🌟 Tính Năng Nổi Bật
+##  Tính Năng Nổi Bật
 
 - **🔍 Giám sát đa dịch vụ (Multi-Service Monitoring):** Hỗ trợ theo dõi đồng thời nhiều dịch vụ (`httpd`, `sshd`, `crond`, `mariadb`, `nginx`, v.v.) thông qua systemd timer/service.
 - **⚡ Tự động phục hồi (Real-time Auto-Healing):** Ngay khi phát hiện dịch vụ bị dừng hoặc crash, Agent tự động thực hiện lệnh khởi động lại (`systemctl restart`) để đảm bảo tính sẵn sàng cao (High Availability - HA).
@@ -19,7 +19,7 @@
 
 ---
 
-## 🏗️ Kiến Trúc Hệ Thống
+## Kiến Trúc Hệ Thống
 
 ```mermaid
 graph LR
@@ -40,7 +40,7 @@ graph LR
 
 ---
 
-## 📁 Cấu Trúc Thư Mục
+## Cấu Trúc Thư Mục
 
 ```text
 ai-service-monitor/
@@ -59,12 +59,12 @@ ai-service-monitor/
 
 ---
 
-## 🚀 Hướng Dẫn Cài Đặt & Khởi Động (CentOS 10)
+##  Hướng Dẫn Cài Đặt & Khởi Động (CentOS 10)
 
-### 🔥 QUY TRÌNH TRÌNH DIỄN CÀI ĐẶT TRỰC TIẾP TỪ CON SỐ 0 (Từ Bước Clone Code & Nhập Key)
+### QUY TRÌNH TRÌNH DIỄN CÀI ĐẶT TRỰC TIẾP TỪ CON SỐ 0 (Từ Bước Clone Code & Nhập Key)
 Dưới đây là kịch bản chuẩn từng bước để bạn thao tác trực tiếp trước Thầy Cô khi muốn trình diễn việc **cài đặt mới hoàn toàn từ con số 0 (không sử dụng code cũ hay key cũ)**:
 
-#### 🗑️ Bước 0: Dọn dẹp sạch sẽ máy chủ (Xóa code cũ + Kill hết tiến trình)
+#### Bước 0: Dọn dẹp sạch sẽ máy chủ (Xóa code cũ + Kill hết tiến trình)
 Chạy khối lệnh này trên Terminal Linux để xóa trắng dự án, giải phóng cống 5000 và xóa cấu hình cũ:
 ```bash
 # 1. Dừng và xóa toàn bộ timer/service giám sát cũ
@@ -87,22 +87,22 @@ cd / && sudo rm -rf /opt/ai-service-monitor /tmp/backend_env.bak
 
 ---
 
-#### 🎬 BẮT ĐẦU TRÌNH DIỄN CÀI ĐẶT TRỰC TIẾP TRƯỚC HỘI ĐỒNG:
+#### BẮT ĐẦU TRÌNH DIỄN CÀI ĐẶT TRỰC TIẾP TRƯỚC HỘI ĐỒNG:
 
-##### 1️⃣ Clone mã nguồn từ GitHub & Phân quyền
+##### Clone mã nguồn từ GitHub & Phân quyền
 ```bash
 sudo git clone https://github.com/KH4NHTU0NG/OSG_PROJECT.git /opt/ai-service-monitor
 sudo chown -R $USER:$USER /opt/ai-service-monitor
 cd /opt/ai-service-monitor
 ```
 
-##### 2️⃣ Cài đặt thư viện Python & Cấp quyền thực thi Agent
+##### Cài đặt thư viện Python & Cấp quyền thực thi Agent
 ```bash
 sudo pip3 install --break-system-packages flask python-dotenv groq
 chmod +x agent/ai_monitor_service.sh
 ```
 
-##### 3️⃣ Cấu hình Groq API Key (`.env`) - *Bước ghi điểm quan trọng*
+##### Cấu hình Groq API Key (`.env`) - *Bước ghi điểm quan trọng*
 - **Lấy Groq API Key (Miễn phí):** Truy cập [console.groq.com](https://console.groq.com) → **API Keys** → Copy key `gsk_...`.
 - **Lấy Gmail App Password:** Truy cập [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) tạo mật khẩu ứng dụng 16 ký tự.
 
@@ -118,7 +118,7 @@ SMTP_EMAIL=your_email@gmail.com
 SMTP_APP_PASSWORD=abcd efgh ijkl mnop
 ```
 
-##### 4️⃣ Cài đặt systemd Service/Timer & Khởi chạy Backend Dashboard
+##### Cài đặt systemd Service/Timer & Khởi chạy Backend Dashboard
 ```bash
 sudo cp agent/ai-monitor@.service agent/ai-monitor@.timer /etc/systemd/system/
 sudo systemctl daemon-reload
@@ -126,7 +126,7 @@ cd /opt/ai-service-monitor/backend
 sudo -E nohup python3 app.py > backend.log 2>&1 &
 sleep 2 && sudo tail -n 15 /opt/ai-service-monitor/backend/backend.log
 ```
-🎉 **Hoàn tất cài đặt!** Giao diện Dashboard đã bật sáng tại `http://<IP-của-máy>:5000`. Bạn có thể mở trình duyệt và tiến hành kích hoạt các service cần theo dõi ngay!
+ **Hoàn tất cài đặt!** Giao diện Dashboard đã bật sáng tại `http://<IP-của-máy>:5000`. Bạn có thể mở trình duyệt và tiến hành kích hoạt các service cần theo dõi ngay!
 
 ### Bước 6: Kích hoạt tự động theo dõi cho các Dịch vụ
 
@@ -144,7 +144,7 @@ sudo systemctl enable --now ai-monitor@crond.timer
 
 ---
 
-## 🎬 Các Kịch Bản Demo & Kiểm Thử
+## Các Kịch Bản Demo & Kiểm Thử
 
 ### Bước 0: Chuẩn Bị & Làm Sạch Môi Trường (Clean Setup từ con số 0)
 Trước khi Demo, chạy cụm lệnh sau với quyền `root` (hoặc `sudo`) để xóa trắng các tiến trình cũ, bảo toàn cấu hình API Key và chuẩn bị môi trường sạch 100%:
@@ -292,7 +292,7 @@ sudo rm -f /tmp/testdisk.img
 
 ---
 
-## 📊 Đánh Giá Hiệu Năng
+## Đánh Giá Hiệu Năng
 
 | Chỉ số | Kết quả |
 |---|---|
@@ -305,7 +305,7 @@ sudo rm -f /tmp/testdisk.img
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
+## Công Nghệ Sử Dụng
 
 | Thành phần | Công nghệ |
 |---|---|
@@ -319,6 +319,6 @@ sudo rm -f /tmp/testdisk.img
 
 ---
 
-## 📄 License
+##  License
 
-MIT License — Sử dụng tự do cho mục đích học tập và nghiên cứu.
+Sử dụng tự do cho mục đích học tập và nghiên cứu.
