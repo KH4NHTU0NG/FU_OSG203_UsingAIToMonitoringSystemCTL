@@ -51,7 +51,7 @@ ai-service-monitor/
 │ └── templates/
 │ └── index.html # Web Dashboard (Service Cards + Resource Bars + Incidents)
 ├── agent/
-│   ├── ai_monitor_service.sh     # Bash script giám sát service + thu thập CPU/RAM/Disk
+│ ├── ai_monitor_service.sh # Bash script giám sát service + thu thập CPU/RAM/Disk
 │   ├── ai-monitor@.service       # systemd service template
 │   └── ai-monitor@.timer         # systemd timer (quét định kỳ mỗi 5 giây)
 └── .gitignore                    # Loại bỏ .env và file log khỏi git
