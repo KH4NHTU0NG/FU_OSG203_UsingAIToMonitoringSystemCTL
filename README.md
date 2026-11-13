@@ -49,7 +49,7 @@ ai-service-monitor/
 │ ├── requirements.txt # Các thư viện Python cần thiết
 │ ├── .env.example # Mẫu cấu hình biến môi trường (API Key, Email)
 │ └── templates/
-│       └── index.html            # Web Dashboard (Service Cards + Resource Bars + Incidents)
+│ └── index.html # Web Dashboard (Service Cards + Resource Bars + Incidents)
 ├── agent/
 │   ├── ai_monitor_service.sh     # Bash script giám sát service + thu thập CPU/RAM/Disk
 │   ├── ai-monitor@.service       # systemd service template
