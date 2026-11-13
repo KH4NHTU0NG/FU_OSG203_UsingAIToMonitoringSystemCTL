@@ -288,7 +288,7 @@ sudo rm -f /tmp/testdisk.img
 | **Disk** | > 90% | AI đề xuất dọn dẹp dung lượng + Email |
 | **Cooldown** | 5 phút | Tránh spam, chỉ cảnh báo 1 lần / 5 phút |
 
-> **Lưu ý:** Có thể tùy chỉnh ngưỡng trong file `app.py` (biến `THRESHOLD_CPU`, `THRESHOLD_MEM`, `THRESHOLD_DISK`).
+> **Lưu ý:** Có thể tùy chỉnh ngưỡng trong file `app.py`(biến `THRESHOLD_CPU`, `THRESHOLD_MEM`, `THRESHOLD_DISK`).
 
 ---
 
