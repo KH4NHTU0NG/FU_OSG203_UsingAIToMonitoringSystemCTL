@@ -319,6 +319,6 @@ sudo rm -f /tmp/testdisk.img
 
 ---
 
-##  License
+## License
 
 Sử dụng tự do cho mục đích học tập và nghiên cứu.
