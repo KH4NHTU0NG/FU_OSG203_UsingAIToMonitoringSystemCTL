@@ -189,7 +189,7 @@ sudo journalctl --rotate && sudo journalctl --vacuum-time=1s
 sudo systemctl stop httpd
 ```
 **Kết quả mong đợi:**
-- **0 - 3 giây:** Dashboard hiển thị dịch vụ chuyển sang trạng thái 🔴 **CRASHED**.
+- **0 - 3 giây:** Dashboard hiển thị dịch vụ chuyển sang trạng thái **CRASHED**.
 - **Sau 3 giây:** Hệ thống tự động khởi động lại dịch vụ, chuyển sang trạng thái ⚡ **RECOVERED**.
 - **Sau 5 - 10 giây:** AI hiển thị báo cáo: *Xác định đây là hành động tắt thủ công từ Admin, hệ thống kích hoạt cơ chế Auto-Healing tự động khởi động lại để đảm bảo High Availability*. Email cảnh báo được gửi đến người quản trị.
 
