@@ -106,7 +106,7 @@ chmod +x agent/ai_monitor_service.sh
 - **Lấy Groq API Key (Miễn phí):** Truy cập [console.groq.com](https://console.groq.com) → **API Keys** → Copy key `gsk_...`.
 - **Lấy Gmail App Password:** Truy cập [myaccount.google.com/apppasswords](https://myaccount.google.com/apppasswords) tạo mật khẩu ứng dụng 16 ký tự.
 
-Tạo file `.env` từ file mẫu và chỉnh sửa:
+Tạo file `.env`từ file mẫu và chỉnh sửa:
 ```bash
 cp backend/.env.example backend/.env
 nano backend/.env
