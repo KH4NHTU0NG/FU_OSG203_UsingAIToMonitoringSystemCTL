@@ -231,7 +231,7 @@ stress --cpu 16 --timeout 20
 - Dashboard: Chỉ sau 1-3 giây, thanh CPU lập tức vọt lên **100%**, chuyển từ Xanh → Đỏ nháy (`VUOT NGUONG`).
 - Khi CPU vượt ngưỡng **90%**: AI tự động phân tích nguyên nhân, đề xuất lệnh `top`, `ps aux --sort=-%cpu | head`để tìm tiến trình chiếm CPU, kèm đánh giá mức độ **WARNING / CRITICAL**.
 - Email cảnh báo gửi ngay lập tức đến hộp thư quản trị viên.
-- Sau đúng 20 giây, lệnh `stress` kết thúc, thanh CPU tự về xanh bình thường.
+- Sau đúng 20 giây, lệnh `stress`kết thúc, thanh CPU tự về xanh bình thường.
 
 ---
 
