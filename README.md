@@ -242,7 +242,7 @@ stress --cpu 16 --timeout 20
 stress --vm 2 --vm-bytes 1024M --timeout 20
 ```
 **Kết quả mong đợi:**
-- Dashboard: Thanh RAM lập tức vọt cao, chuyển đỏ nháy, hiển thị `⚠️ VUOT NGUONG`.
+- Dashboard: Thanh RAM lập tức vọt cao, chuyển đỏ nháy, hiển thị `VUOT NGUONG`.
 - AI phân tích: Phát hiện tiến trình `stress` chiếm RAM bất thường, đề xuất kiểm tra `ps aux --sort=-%mem | head`, `free -m`, `cat /proc/meminfo`, cảnh báo nguy cơ OOM-Kill.
 - Email cảnh báo gửi đến quản trị viên với phân tích chi tiết.
 - Sau đúng 20 giây, RAM được giải phóng và thanh trạng thái tự phục hồi.
