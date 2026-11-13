@@ -147,7 +147,7 @@ sudo systemctl enable --now ai-monitor@crond.timer
 ## Các Kịch Bản Demo & Kiểm Thử
 
 ### Bước 0: Chuẩn Bị & Làm Sạch Môi Trường (Clean Setup từ con số 0)
-Trước khi Demo, chạy cụm lệnh sau với quyền `root` (hoặc `sudo`) để xóa trắng các tiến trình cũ, bảo toàn cấu hình API Key và chuẩn bị môi trường sạch 100%:
+Trước khi Demo, chạy cụm lệnh sau với quyền `root`(hoặc `sudo`) để xóa trắng các tiến trình cũ, bảo toàn cấu hình API Key và chuẩn bị môi trường sạch 100%:
 ```bash
 # 1. Dừng & xóa toàn bộ systemd timer/service giám sát cũ
 sudo systemctl stop ai-monitor@*.timer ai-monitor@*.service 2>/dev/null
