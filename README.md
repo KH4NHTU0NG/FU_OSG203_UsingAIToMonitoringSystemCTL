@@ -274,7 +274,7 @@ sudo rm -f /tmp/testdisk.img
 3. **Kết quả mong đợi:**
    - AI tự động gõ và chạy lệnh Linux ngầm: `systemctl restart crond && systemctl status crond --no-pager`
    - AI trả về output bash thực tế kèm thông báo tiếng Việt: *"Dịch vụ crond đã được khởi động lại thành công (active running)..."*
-   - Bảng **⚙️ Core Daemons** trên Dashboard lập tức chuyển trạng thái `crond` sang xanh **`✅ HEALTHY`** kèm thời gian cập nhật mới nhất!
+   - Bảng ** Core Daemons** trên Dashboard lập tức chuyển trạng thái `crond`sang xanh **`HEALTHY`** kèm thời gian cập nhật mới nhất!
 *(Xem trọn bộ kịch bản chi tiết trong file `DEMO_AI_CHATBOX_V4.5.md`)*
 
 ---
