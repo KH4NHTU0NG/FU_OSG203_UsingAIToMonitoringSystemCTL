@@ -45,7 +45,7 @@ graph LR
 ```text
 ai-service-monitor/
 ├── backend/
-│   ├── app.py                    # Flask Server + Groq AI + Gmail SMTP + Resource Threshold
+│ ├── app.py # Flask Server + Groq AI + Gmail SMTP + Resource Threshold
 │   ├── requirements.txt          # Các thư viện Python cần thiết
 │   ├── .env.example              # Mẫu cấu hình biến môi trường (API Key, Email)
 │   └── templates/
