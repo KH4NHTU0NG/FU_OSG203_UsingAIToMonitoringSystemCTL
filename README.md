@@ -59,7 +59,7 @@ ai-service-monitor/
 
 ---
 
-##  Hướng Dẫn Cài Đặt & Khởi Động (CentOS 10)
+## Hướng Dẫn Cài Đặt & Khởi Động (CentOS 10)
 
 ### QUY TRÌNH TRÌNH DIỄN CÀI ĐẶT TRỰC TIẾP TỪ CON SỐ 0 (Từ Bước Clone Code & Nhập Key)
 Dưới đây là kịch bản chuẩn từng bước để bạn thao tác trực tiếp trước Thầy Cô khi muốn trình diễn việc **cài đặt mới hoàn toàn từ con số 0 (không sử dụng code cũ hay key cũ)**:
