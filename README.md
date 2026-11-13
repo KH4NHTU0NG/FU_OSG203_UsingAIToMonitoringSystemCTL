@@ -279,7 +279,7 @@ sudo rm -f /tmp/testdisk.img
 
 ---
 
-## ⚙️ Ngưỡng Cảnh Báo Tài Nguyên (Cấu Hình Mặc Định)
+## Ngưỡng Cảnh Báo Tài Nguyên (Cấu Hình Mặc Định)
 
 | Tài nguyên | Ngưỡng | Hành động khi vượt |
 |---|---|---|
