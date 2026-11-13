@@ -260,7 +260,7 @@ sudo rm -f /tmp/testdisk.img
 ```
 **Kết quả mong đợi:**
 - Dashboard: Thanh Disk chuyển đỏ nháy.
-- AI phân tích: Đề xuất `du -sh /var/log/*`, `df -h`, `find / -type f -size +100M` để tìm thư mục/file chiếm dung lượng, gợi ý xóa log cũ, nén file backup.
+- AI phân tích: Đề xuất `du -sh /var/log/*`, `df -h`, `find / -type f -size +100M`để tìm thư mục/file chiếm dung lượng, gợi ý xóa log cũ, nén file backup.
 - Email cảnh báo gửi đến quản trị viên.
 
 ---
