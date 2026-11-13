@@ -4,7 +4,7 @@
 
 ---
 
-##  Tính Năng Nổi Bật
+## Tính Năng Nổi Bật
 
 - ** Giám sát đa dịch vụ (Multi-Service Monitoring):** Hỗ trợ theo dõi đồng thời nhiều dịch vụ (`httpd`, `sshd`, `crond`, `mariadb`, `nginx`, v.v.) thông qua systemd timer/service.
 - ** Tự động phục hồi (Real-time Auto-Healing):** Ngay khi phát hiện dịch vụ bị dừng hoặc crash, Agent tự động thực hiện lệnh khởi động lại (`systemctl restart`) để đảm bảo tính sẵn sàng cao (High Availability - HA).
